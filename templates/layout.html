@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Hello from Flask</title>
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<p>Welcome to the Flask sandbox app. Please see <a href="https://github.com/fredericlam/FlaskDemo">github project located here</a>. </p>
+			<ul class="nav">
+				<li><a href="/">Home</a></li>
+				<li><a href="/projects">Projects</a></li>
+				<li><a href="/name/fred">Name: Fred</a></li>
+				<li><a href="/name/kimie">Name: Kimie</a></li>
+				<li><a href="/name/99">Post: 99</a></li>
+				<li><a href="/routes">Routes</a></li>
+				<li><a href="/login">Login</a></li>
+			</ul>
+		</header>
+		<main>
+		{% block content %}
+			<p> some content </p>
+		{% endblock %}
+		</main>
+		<footer>
+		</footer>
+
+	</div>
+
+</body>

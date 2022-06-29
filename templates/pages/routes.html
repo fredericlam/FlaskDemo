@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<h1> Routes </h1>
+	<p> Theses are existing routes - Number of routes ({{ routes|length }})</p>
+	<ul>
+		{% for route in routes %}
+		<li>{{ route }}</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
